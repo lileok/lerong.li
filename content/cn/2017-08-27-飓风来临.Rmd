@@ -1,0 +1,78 @@
+---
+title: 飓风来临
+author: lileok
+date: '2017-08-27'
+slug: 飓风来临
+---
+
+
+
+# 初始化
+
+Hugo文件结构
+
+* config.toml: set global configs of the sites
+* content/
+* static/
+* themes/
+* layouts/
+
+## config.toml
+
+This file is used to set global configurations of websites like
+
+* title
+* description of websites
+* external links
+* navigation menu
+* base URL
+* ...
+
+Hugo generating mechanism: search config.toml first then config.yaml if not found. It's recommended to use toml for config file but yaml for metadata of markdowns pages and posts which fully support only yaml syntax.
+
+TOML syntax: key-value pairs (map) separated by equal signs
+
+``` 
+key = value
+
+title = "My Awesome Site" # value is either quoted characters 
+relativeURLs = true   # or lowercase Boolean true/false
+```
+YAML syntax: key-value pairs (map) separated by : signs
+
+```
+key: value
+
+```
+
+
+
+## content/ 
+
+```
+├── _index.md
+├── about.md
+├── vitae.md
+├── post/
+│   ├── 2017-01-01-foo.md
+│   ├── 2017-01-02-bar.md
+│   └── ...
+└── ...
+```
+
+## layout 文件夹
+
+如果对theme部分细节不满意，可以在layout里来覆盖theme文件里面的layout，或者直接在layout里设置，而不用theme。
+需要注意的是覆盖是针对所有layout下相对路径一样的文件，比如
+layouts/partials/foot_custom.html 会覆盖主题文件下的
+themes/hugo-xmin/layouts/partials/foot_custom.html
+
+## static 文件夹
+
+>> everything under static/ will be copied to public/
+
+该文件夹下主要用来存放 image， css，以及JavaScript文件，Hugo在render的时候会copy到`public/`文件夹下面.同layout文件一样，在theme下面有对应的，所以用来覆盖主题默认的设置。
+这里需要注意的是对于rmd文件。
+
+# 文件的管理
+
