@@ -20,12 +20,12 @@ menu:
     - name: "About"
       url: "/about/"
       weight: 1
-    - name: "Resume"
-      url: "/resume/"
-      weight: 2
-    - name: "Research"
-      url: "/research/"
-      weight: 3
+#    - name: "Resume"
+#      url: "/resume/"
+#      weight: 2
+#    - name: "Research"
+#      url: "/research/"
+#      weight: 3
     - name: "Links"
       url: "/links/"
       weight: 4
@@ -81,7 +81,7 @@ params:
   dateFormat: "2006/01/02"
   customCSS: ["css/custom.css"]
   customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js"]
-  githubContentURL: "https://github.com/rbind/daijiang/edit/master/content/"
+  #githubContentURL: "https://github.com/rbind/daijiang/edit/master/content/"
 
   # options for highlight.js (version, additional languages, and theme)
   highlightjsVersion: "9.11.0"
