@@ -1,0 +1,68 @@
+---
+title: 飓风来临
+author: lileok
+date: '2017-08-27'
+slug: 飓风来临
+---
+
+
+
+<div class="section level1">
+<h1>初始化</h1>
+<p>Hugo文件结构</p>
+<ul>
+<li>config.toml: set global configs of the sites</li>
+<li>content/</li>
+<li>static/</li>
+<li>themes/</li>
+<li>layouts/</li>
+</ul>
+<div id="config.toml" class="section level2">
+<h2>config.toml</h2>
+<p>This file is used to set global configurations of websites like</p>
+<ul>
+<li>title</li>
+<li>description of websites</li>
+<li>external links</li>
+<li>navigation menu</li>
+<li>base URL</li>
+<li>…</li>
+</ul>
+<p>Hugo generating mechanism: search config.toml first then config.yaml if not found. It’s recommended to use toml for config file but yaml for metadata of markdowns pages and posts which fully support only yaml syntax.</p>
+<p>TOML syntax: key-value pairs (map) separated by equal signs</p>
+<pre><code>key = value
+
+title = &quot;My Awesome Site&quot; # value is either quoted characters 
+relativeURLs = true   # or lowercase Boolean true/false</code></pre>
+<p>YAML syntax: key-value pairs (map) separated by : signs</p>
+<pre><code>key: value
+</code></pre>
+</div>
+<div id="content" class="section level2">
+<h2>content/</h2>
+<pre><code>├── _index.md
+├── about.md
+├── vitae.md
+├── post/
+│   ├── 2017-01-01-foo.md
+│   ├── 2017-01-02-bar.md
+│   └── ...
+└── ...</code></pre>
+</div>
+<div id="layout-" class="section level2">
+<h2>layout 文件夹</h2>
+<p>如果对theme部分细节不满意，可以在layout里来覆盖theme文件里面的layout，或者直接在layout里设置，而不用theme。 需要注意的是覆盖是针对所有layout下相对路径一样的文件，比如 layouts/partials/foot_custom.html 会覆盖主题文件下的 themes/hugo-xmin/layouts/partials/foot_custom.html</p>
+</div>
+<div id="static-" class="section level2">
+<h2>static 文件夹</h2>
+<blockquote>
+<blockquote>
+<p>everything under static/ will be copied to public/</p>
+</blockquote>
+</blockquote>
+<p>该文件夹下主要用来存放 image， css，以及JavaScript文件，Hugo在render的时候会copy到<code>public/</code>文件夹下面.同layout文件一样，在theme下面有对应的，所以用来覆盖主题默认的设置。 这里需要注意的是对于rmd文件。</p>
+</div>
+</div>
+<div class="section level1">
+<h1>文件的管理</h1>
+</div>
