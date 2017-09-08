@@ -1,6 +1,6 @@
 options(
   blogdown.method = 'custom', digits = 4, servr.daemon = TRUE, formatR.indent = 2,
-  blogdown.publishDir = '../daijiang-public', blogdown.yaml.empty = FALSE,
+  blogdown.publishDir = '../lileok-public', blogdown.yaml.empty = FALSE,
   blogdown.subdir = 'cn'
 )
 

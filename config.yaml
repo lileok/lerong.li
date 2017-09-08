@@ -99,7 +99,7 @@ params:
 #    weibo_url: "mydyo"
 
   logo:
-    url: "logo.png"
+    url: "logo.jpg"
     width: 60
     height: 50
     alt: "lileok"
